@@ -1,6 +1,11 @@
+@import "variables";
+@import "mixins";
+
+/*
 $font-sans: "Catamaran", Arial, sans-serif;
 $font-mono: "Unica One", monospace;
 
+$c-paper: rgb(255, 253, 250);
 $c-light: rgb(235, 233, 230);
 $c-red: rgb(255, 60, 0);
 $c-indigo: rgb(50, 45, 52);
@@ -8,8 +13,6 @@ $c-green: rgb(140, 230, 70);
 $c-gray: rgb(150, 135, 155);
 $c-dimgray: rgba(150, 135, 155, .25);
 $c-ocean: rgb(0, 65, 85);
-$c-halfwhite: rgba(255, 253, 250, .5);
-$c-90white: rgba(255, 253, 250, .9);
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -115,7 +118,7 @@ $c-90white: rgba(255, 253, 250, .9);
   -o-transform: $args;
   transform: $args;
 }
-
+*/
 
 /* 
     BASE
@@ -638,7 +641,7 @@ h1.subtitle {
 	border-top-left-radius: .5em;
 	border-bottom-left-radius: .5em;
 	border-radius: .5em;
-	background: $c-90white;
+	background: transparentize($c-paper, .9);
 	box-shadow: 0 0 .75em rgba(100, 100, 100, .25);
 	
 	@include transition(all .25s ease);
