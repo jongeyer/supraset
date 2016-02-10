@@ -5,15 +5,30 @@
 
 
 $(document).ready(function () {
-    /*var s = skrollr.init({
-        forceHeight: true,
-		smoothScrolling: true
-    });*/
- 
+	var lazyTitles = new Blazy({
+		selector: ".stretch.b-lazy",
+		breakpoints: [{
+			width: 768, // max-width
+			src: 'data-src-small'
+	    }]
+	});
+	var lazyScrollers = new Blazy({
+		selector: ".project .b-lazy",
+		breakpoints: [{
+			width: 768, // max-width
+			src: 'data-src-small'
+	    }],
+		loadInvisible: true
+	});
+	
 	$('.bxslider').bxSlider({
-		/*mode: 'vertical',*/
-		hideControlOnEnd: true,
-		pager: false
+		//mode: 'vertical',
+		pager: false,
+		preloadImages: 'all',
+		captions: true,
+		onSlideBefore: function(){
+			lazyScrollers.revalidate();
+		}
 	});
 	
     supra.init();
@@ -94,7 +109,7 @@ _.extend(supra, {
 		NProgress.done();
     },
 
-    next: function () {
+    /*next: function () {
         if (this.page < 4) {
             console.debug("next", this.page);
             this.page++;
@@ -107,7 +122,7 @@ _.extend(supra, {
             this.page--;
             this.movePage();
         }
-    },
+    },*/
 
     setHash: function (_page) {
         if(history.pushState) {
@@ -140,58 +155,11 @@ _.extend(supra, {
         var self = this;
         NProgress.start();
 		
-        /*
-        $("section article").off("scroll");
-        this.$el.scroll(function(){
-            console.debug($(this), $(this).scrollTop());
-            
-            if(self.$el.scrollTop() === 0){
-                self.prev();
-            }else if (self.$el.height() + self.$el.scrollTop() === $(document).height()) {
-                self.next();
-            }
-        });*/
-
-        /*
-        if(hash === "front"){
-            $("section.front").removeClass("prev next hide").addClass("curr");
-            $("section.profile").removeClass("prev curr hide").addClass("next");
-            $("section.projects").removeClass("prev curr next").addClass("hide");
-            $("section.contact").removeClass("prev curr next").addClass("hide");
-        }else if(hash === "profile"){
-            $("section.front").removeClass("curr next hide").addClass("prev");
-            $("section.profile").removeClass("prev next hide").addClass("curr");
-            $("section.projects").removeClass("prev curr hide").addClass("next");
-            $("section.contact").removeClass("prev curr next").addClass("hide");
-        }else if(hash === "projects"){
-            $("section.front").removeClass("curr next hide").addClass("prev");
-            $("section.profile").removeClass("prev next hide").addClass("curr");
-            $("section.projects").removeClass("prev curr hide").addClass("next");
-            $("section.contact").removeClass("prev curr next").addClass("hide");
-        }else if(hash === "contact"){
-            $("section.front").removeClass("curr next hide").addClass("prev");
-            $("section.profile").removeClass("prev next hide").addClass("curr");
-            $("section.projects").removeClass("prev curr hide").addClass("next");
-            $("section.contact").removeClass("prev curr next").addClass("hide");
-        }*/
 
         NProgress.done();
-        /*
-        $('.app-menu .link').each(function(){
-            $(this).removeClass("active");
-            if($(this).data("link") === hash.link && !hash.id.length){
-                $(this).addClass("active");
-            }
-        });
-        $.get(hash.link + '.html', { "_": $.now() }, function (data) {
-            self.el.html(data);
-            self.el.fadeIn();
-            
-            self.loadDataForPage(hash);
-        }, 'html');
-        */
+        
     },
-    movePage: function () {
+    /*movePage: function () {
         var self = this;
         //console.debug("supra :: movePage");
 
@@ -211,38 +179,5 @@ _.extend(supra, {
                 $this.removeClass("prev curr next").addClass("hide");
             }
         });
-    },
-
-
-    loadProject: function (_pid, _$li) {
-        //console.info("s:loadProject");
-
-        var $oldLi = $(".project-list li.active");
-        var oldId = $oldLi.data("project");
-
-        $(".project-list li").removeClass("active");
-        _$li.addClass("active");
-
-        var template = _.template($("#tmp-project").html());
-
-        if (_pid > oldId) {
-            $(".project").append($(template({
-                title: "Project " + _pid
-            })));
-        } else {
-            $(".project").append($(template({
-                title: "Project " + _pid
-            })));
-        }
-
-        $(".project .curr").toggleClass("curr old").addClass(_pid > oldId ? "up" : "down");
-        setTimeout(function () {
-            $(".project .old").remove();
-            $(".project .new").toggleClass("curr new");
-        }, 500);
-
-
-        // slide out curr project
-        // slide in curr project
-    }
+    }*/
 });

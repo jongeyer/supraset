@@ -8,7 +8,7 @@
     
     <link href='https://fonts.googleapis.com/css?family=Catamaran:400,200,700|Unica+One' rel='stylesheet' type='text/css'>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="lib/nprogress.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css">
     <link rel="stylesheet" type="text/css" href="src/styling.css">
     
     <title>Jonathan Geyer - {Supraset}</title> 
@@ -59,7 +59,8 @@
         <section data-order="2" id="who" class='who next t-ocean'>
             <div class="backing"></div>
             <div class="section-inner flex-v">
-				<div class="flex stretch" style="background: url(images/nightsky-up-r.jpg); background-size: cover;">
+				<!--<div class="flex stretch" style="background: url(images/nightsky-up-r.jpg); background-size: cover;">-->
+				<div class="flex stretch b-lazy" data-src="images/title/nightsky-up-r.jpg" style="background: url(images/blur.jpg); background-size: cover;">
 					<h2>&nbsp;Who</h2>
 				</div>
                 <div class="">
@@ -85,8 +86,8 @@
         </section>
 		<section data-order="2" id="how" class='how next t-ocean'>
             <div class="section-inner flex-v">
-                <!--<div class="flex stretch" data-bottom-top="transform: translate(0, 100px)" data-40-top="transform: translate(0, 0px)" data-top-bottom="transform: translate(0, -100px)">-->
-				<div class="flex stretch b-red" style="background: url(images/build-r.jpg); background-size: cover;">
+				<!--<div class="flex stretch b-red" style="background: url(images/build-r.jpg); background-size: cover;">-->
+				<div class="flex stretch b-red b-lazy" data-src="images/title/build-r.jpg" style="background: url(images/blur.jpg); background-size: cover;">
 					<h2 class="t-red">How</h2>
 				</div>
                 <div class="">
@@ -132,7 +133,8 @@
         </section>
         <section data-order="3" id="what" class='what'>
 			<div class="section-inner flex-v">
-				<div class="flex stretch" style="background: url(images/wood-r.jpg); background-size: cover;">
+				<!--<div class="flex stretch" style="background: url(images/wood-r.jpg); background-size: cover;">-->
+				<div class="flex stretch b-lazy" data-src="images/title/wood-r.jpg" style="background: url(images/blur.jpg); background-size: cover;">
 					<h2>
 						What<br>
 						<span style="vertical-align: text-top;">&bull; &bull;</span><br>
@@ -159,9 +161,12 @@
 							</div>
 							<div class="project-slides">
 								<ul class="slides bxslider">
-									<li><img src="images/project/himoney-1.jpg" alt="project image"></li>
+									<li><img class="b-lazy" src="images/blur.jpg" data-src="images/project/himoney-1.jpg" data-src-small="images/project-lo/himoney-1.jpg" alt="project image" /></li>
+									<li><img class="b-lazy" src="images/blur.jpg" data-src="images/project/himoney-2.jpg" data-src-small="images/project-lo/himoney-2.jpg" alt="project image" /></li>
+									<li><img class="b-lazy" src="images/blur.jpg" data-src="images/project/himoney-3.jpg" data-src-small="images/project-lo/himoney-3.jpg" alt="project image" /></li>
+									<!--<li><img src="images/project/himoney-1.jpg" alt="project image"></li>
 									<li><img src="images/project/himoney-2.jpg" alt="project image"></li>
-									<li><img src="images/project/himoney-3.jpg" alt="project image"></li>
+									<li><img src="images/project/himoney-3.jpg" alt="project image"></li>-->
 								</ul>
 							</div>
 						</div>
@@ -180,10 +185,10 @@
 							</div>
 							<div class="project-slides">
 								<ul class="slides bxslider">
-									<li><img src="images/project/pmnm-hmc-1.jpg" alt="project image"></li>
-									<li><img src="images/project/pmnm-hmc-2.jpg" alt="project image"></li>
-									<li><img src="images/project/pmnm-hmc-3.jpg" alt="project image"></li>
-									<li><img src="images/project/pmnm-hmc-4.jpg" alt="project image"></li>
+									<li><img class="b-lazy" src="images/blur.jpg" data-src="images/project/pmnm-hmc-1.jpg" data-src-small="images/project-lo/pmnm-hmc-1.jpg" alt="project image" /></li>
+									<li><img class="b-lazy" src="images/blur.jpg" data-src="images/project/pmnm-hmc-2.jpg" data-src-small="images/project-lo/pmnm-hmc-2.jpg" alt="project image" /></li>
+									<li><img class="b-lazy" src="images/blur.jpg" data-src="images/project/pmnm-hmc-3.jpg" data-src-small="images/project-lo/pmnm-hmc-3.jpg" alt="project image" /></li>
+									<li><img class="b-lazy" src="images/blur.jpg" data-src="images/project/pmnm-hmc-4.jpg" data-src-small="images/project-lo/pmnm-hmc-4.jpg" alt="project image" /></li>
 								</ul>
 							</div>
 						</div>
@@ -206,12 +211,12 @@
 							</div>
 							<div class="project-slides">
 								<ul class="slides bxslider">
-									<li><img src="images/project/pmnm-kiosk-1.jpg" alt="project image"></li>
-									<li><img src="images/project/pmnm-kiosk-2.jpg" alt="project image"></li>
-									<li><img src="images/project/pmnm-kiosk-3.jpg" alt="project image"></li>
-									<li><img src="images/project/pmnm-pims-1.jpg" alt="project image"></li>
-									<li><img src="images/project/pmnm-pims-2.jpg" alt="project image"></li>
-									<li><img src="images/project/pmnm-pims-3.jpg" alt="project image"></li>
+									<li><img class="b-lazy" src="images/blur.jpg" data-src="images/project/pmnm-kiosk-1.jpg" data-src-small="images/project-lo/pmnm-kiosk-1.jpg" alt="project image" /></li>
+									<li><img class="b-lazy" src="images/blur.jpg" data-src="images/project/pmnm-kiosk-2.jpg" data-src-small="images/project-lo/pmnm-kiosk-2.jpg" alt="project image" /></li>
+									<li><img class="b-lazy" src="images/blur.jpg" data-src="images/project/pmnm-kiosk-3.jpg" data-src-small="images/project-lo/pmnm-kiosk-3.jpg" alt="project image" /></li>
+									<li><img class="b-lazy" src="images/blur.jpg" data-src="images/project/pmnm-pims-1.jpg" data-src-small="images/project-lo/pmnm-pims-1.jpg" alt="project image" /></li>
+									<li><img class="b-lazy" src="images/blur.jpg" data-src="images/project/pmnm-pims-2.jpg" data-src-small="images/project-lo/pmnm-pims-2.jpg" alt="project image" /></li>
+									<li><img class="b-lazy" src="images/blur.jpg" data-src="images/project/pmnm-pims-3.jpg" data-src-small="images/project-lo/pmnm-pims-3.jpg" alt="project image" /></li>
 								</ul>
 							</div>
 						</div>
@@ -230,9 +235,9 @@
 							</div>
 							<div class="project-slides">
 								<ul class="slides bxslider">
-									<li><img src="images/project/pmnm-bom-1.jpg" alt="project image"></li>
-									<li><img src="images/project/pmnm-bom-2.jpg" alt="project image"></li>
-									<li><img src="images/project/pmnm-bom-3.jpg" alt="project image"></li>
+									<li><img class="b-lazy" src="images/blur.jpg" data-src="images/project/pmnm-bom-1.jpg" data-src-small="images/project-lo/pmnm-bom-1.jpg" alt="project image" /></li>
+									<li><img class="b-lazy" src="images/blur.jpg" data-src="images/project/pmnm-bom-2.jpg" data-src-small="images/project-lo/pmnm-bom-2.jpg" alt="project image" /></li>
+									<li><img class="b-lazy" src="images/blur.jpg" data-src="images/project/pmnm-bom-3.jpg" data-src-small="images/project-lo/pmnm-bom-3.jpg" alt="project image" /></li>
 								</ul>
 							</div>
 						</div>
@@ -250,9 +255,9 @@
 							</div>
 							<div class="project-slides">
 								<ul class="slides bxslider">
-									<li><img src="images/project/tcr-1.jpg" alt="project image"></li>
-									<li><img src="images/project/tcr-2.jpg" alt="project image"></li>
-									<li><img src="images/project/tcr-3.jpg" alt="project image"></li>
+									<li><img class="b-lazy" src="images/blur.jpg" data-src="images/project/tcr-1.jpg" data-src-small="images/project-lo/tcr-1.jpg" alt="project image" /></li>
+									<li><img class="b-lazy" src="images/blur.jpg" data-src="images/project/tcr-2.jpg" data-src-small="images/project-lo/tcr-2.jpg" alt="project image" /></li>
+									<li><img class="b-lazy" src="images/blur.jpg" data-src="images/project/tcr-3.jpg" data-src-small="images/project-lo/tcr-3.jpg" alt="project image" /></li>
 								</ul>
 							</div>
 						</div>
@@ -287,7 +292,8 @@
         <section id="where" class='where'>
             <div class="backing"></div>
 			<div class="section-inner flex-v">
-				<div class="flex justify-center stretch b-light" style="background: url(images/shore-r.jpg); background-size: cover;">
+				<!--<div class="flex justify-center stretch b-light" style="background: url(images/shore-r.jpg); background-size: cover;">-->
+				<div class="flex justify-center stretch b-light b-lazy" data-src="images/title/shore-r.jpg" style="background: url(images/blur.jpg); background-size: cover;">
 					<h2 class="">Where</h2>
 				</div>
 				<div class="stretch-back container flex-h flexcols justify-center sm-col-reverse t-light bg-indigo large">
@@ -343,10 +349,11 @@
     </script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-    <!--<script type="text/javascript" src="lib/jquery.scrollme-min.js-min.js"></script>-->
     <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>-->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js"></script>	
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/1.4.0/lazysizes.min.js"></script>-->
+	<script src="//cdn.jsdelivr.net/blazy/latest/blazy.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js"></script>
 		
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
