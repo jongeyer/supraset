@@ -181,6 +181,9 @@ a {
 .justify-around {
     @include justify-content(space-around);
 }
+.flex-align-center {
+	@include align-items(center);
+}
 
 .flexcols {
     @include flex-wrap(wrap);
@@ -516,10 +519,6 @@ aside {
 
     @include transition(all .25s ease);
 
-	&.archive {
-	    display: block;
-	}
-
 	&:hover {
 	    box-shadow: 0 0 1.5em rgba($c-gray-dark, .25);
 	}
@@ -571,17 +570,33 @@ aside {
 
 
 .archive {
+	display: block;
     max-height: 2em;
     max-width: 21em;
 
     overflow: hidden;
-    padding: 1.5em;
+    padding: 1.4em 2em;
 
     cursor: pointer;
+	&.project {
+		@include transition(all .75s ease-in-out);
+	}
+
+	> div {
+		opacity: 0;
+		@include transition(all .75s ease-in-out);
+	}
+	> div:first-child {
+		opacity: 1;
+	}
 
 	&.open {
 	    max-height: 100em;
 	    max-width: 1000em;
+
+		> div {
+			opacity: 1;
+		}
 
 		.plus {
 		    @include transform(rotate(45deg));
@@ -590,6 +605,8 @@ aside {
 	.plus {
 	    @include transition(all .5s ease-in-out);
 
+		line-height: 0;
+	    font-size: 3em;
 	}
 	&:hover .plus,
 	&:active .plus {
