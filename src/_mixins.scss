@@ -1,3 +1,4 @@
+// scss-lint:disable Indentation EmptyLineBetweenBlocks PropertySortOrder DeclarationOrder PseudoElement
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -102,4 +103,11 @@
   -ms-transform: $args;
   -o-transform: $args;
   transform: $args;
+}
+@mixin filter($filter-type, $filter-amount) {
+  -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+  -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+  -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+  -o-filter: $filter-type+unquote('(#{$filter-amount})');
+  filter: $filter-type+unquote('(#{$filter-amount})');
 }

@@ -1,3 +1,5 @@
+// scss-lint:disable Indentation EmptyLineBetweenBlocks PropertySortOrder DeclarationOrder PseudoElement
+
 $font-sans: "Catamaran", Arial, sans-serif;
 $font-mono: "Unica One", monospace;
 
@@ -7,5 +9,6 @@ $c-red: rgb(255, 60, 0);
 $c-indigo: rgb(50, 45, 52);
 $c-green: rgb(140, 230, 70);
 $c-gray: rgb(150, 135, 155);
+$c-gray-dark: rgb(100, 85, 105);
 $c-dimgray: rgba(150, 135, 155, .25);
 $c-ocean: rgb(0, 65, 85);
