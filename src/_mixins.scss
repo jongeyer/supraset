@@ -1,4 +1,47 @@
+
 // scss-lint:disable Indentation EmptyLineBetweenBlocks PropertySortOrder DeclarationOrder PseudoElement
+
+//
+// BREAKPOINTS
+//
+
+// Defining values
+$small-up:   36em;
+$medium-dn:  36.001em;
+$medium-up:  56em;
+$large-dn:   56.001em;
+$large-up:   80em;
+$xlarge-dn:  80.001em;
+
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: $xlarge-dn) {
+      @content;
+    }
+  } @else if $point == laptop {
+    @media (min-width: $large-dn) and (max-width: $large-up) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (min-width: $medium-dn) and (max-width: $medium-up) {
+      @content;
+    }
+  } @else if $point == mobile {
+    @media (max-width: $small-up) {
+      @content;
+    }
+
+  } @else if $point == large {
+    @media (min-width: $large-dn) {
+      @content;
+    }
+  } @else if $point == small {
+    @media (max-width: $medium-up) {
+      @content;
+    }
+  }
+}
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -90,7 +133,7 @@
 	align-self: $value;
 }
 
-@mixin transition($args) {
+@mixin transition($args: .25s all ease) {
   -webkit-transition: $args;
   -moz-transition: $args;
   -ms-transition: $args;
