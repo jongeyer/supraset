@@ -12,7 +12,7 @@ module.exports = {
   entry: './src/supra.js',
   // Where should the compiled file go?
   output: {
-    path: path.join(__dirname, "js"),
+    path: path.join(__dirname, "dist"),
     publicPath: 'dist/',
     // With the filename `build.js` so it's dist/build.js
     filename: 'build.js'
