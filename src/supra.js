@@ -5,9 +5,9 @@
 import $ from 'jquery'
 import Blazy from 'blazy'
 import bxslider from 'bxslider/dist/jquery.bxslider'
+import bxslider_css from 'bxslider/dist/jquery.bxslider.min.css'
 
 function runrunrun (){
-	console.debug("ranranran")
 
   let lazyTitles = new Blazy({
     selector: ".stretch.b-lazy",
